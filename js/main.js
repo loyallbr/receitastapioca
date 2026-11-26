@@ -32,7 +32,7 @@
         btn.addEventListener('click', () => {
           const img = btn.querySelector('img');
           if (!img) return;
-          dialogImage.src = img.src;
+          dialogImage.src = img.dataset.full || img.src;
           dialogImage.alt = img.alt;
           if (typeof pageDialog.showModal === 'function') {
             pageDialog.showModal();
